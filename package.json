@@ -1,0 +1,22 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "bookstore demo. Simple CRUD operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd backend && npm test",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && npm start",
+    "db": "sqlite3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/joaquinlarra/bookstore-demo.git"
+  },
+  "author": "Joaquin Astelarra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/joaquinlarra/bookstore-demo/issues"
+  },
+  "homepage": "https://gitlab.com/joaquinlarra/bookstore-demo#readme"
+}
