@@ -5,18 +5,13 @@ import BookIcon from '@material-ui/icons/Book';
 import feathersClient from './feathersClient';
 import { restClient } from 'ra-data-feathers';
 import { Admin, Resource, ListGuesser } from 'react-admin';
-// import { Admin, Resource } from 'react-admin';
-//import jsonServerProvider from 'ra-data-json-server';
-
-const dataProvider = restClient(feathersClient,{});
-// const App = () => <Admin dataProvider={dataProvider} />;
-
-
+import { AuthorList, AuthorEdit, AuthorCreate } from './resources/authors';
+import { PublicationList, PublicationEdit, PublicationCreate } from './resources/publications';
 
 const App = () => (
     <Admin dataProvider={restClient(feathersClient)}>
-        <Resource name="authors" list={ListGuesser} icon={PeopleIcon} />
-        <Resource name="publications" list={ListGuesser} icon={BookIcon} />
+        <Resource name="authors" list={AuthorList} edit={AuthorEdit} create={AuthorCreate} icon={PeopleIcon} />
+        <Resource name="publications" list={PublicationList} edit={PublicationEdit} create={PublicationCreate} icon={BookIcon} />
     </Admin>
 );
 

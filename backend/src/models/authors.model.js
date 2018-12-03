@@ -6,9 +6,30 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const authors = sequelizeClient.define('authors', {
-    text: {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+    },
+    name: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
+    },
+    dob: {
+      type: DataTypes.DATEONLY,
+      allowNull: false
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      field: 'created_at'
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      field: 'updated_at',
     }
   }, {
     hooks: {
