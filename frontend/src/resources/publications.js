@@ -1,5 +1,5 @@
 import React from 'react';
-import {DateInput, DateTimeInput, Filter, ImageInput, ImageField, DateField, List, Responsive, SimpleList, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
+import { DateInput, DateTimeInput, Filter, ImageInput, ImageField, DateField, List, Responsive, SimpleList, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
 
 // const PostFilter = (props) => (
 //   <Filter {...props}>
@@ -9,10 +9,21 @@ import {DateInput, DateTimeInput, Filter, ImageInput, ImageField, DateField, Lis
 //       </ReferenceInput>
 //   </Filter>
 // );
+
+
 const FullNameField = ({ record }) => <span><b>{record.name}</b> <small>{record.email}</small></span>;
 
+const PublicationsFilter = (props) => (
+    <Filter {...props}>
+        <TextInput label="Title" source="title" />
+        <ReferenceInput label="Author" source="authorId" reference="authors">
+            <SelectInput optionText={<FullNameField />} />
+        </ReferenceInput>
+    </Filter>
+);
+
 export const PublicationList = (props) => (
-  <List {...props}>
+  <List {...props} filters={<PublicationsFilter />}>
       <Responsive
           small={
               <SimpleList
@@ -27,7 +38,7 @@ export const PublicationList = (props) => (
                   <TextField source="title" />
                   <ReferenceField label="Author" source="authorId" reference="authors">
                       <FullNameField/>
-                </ReferenceField>
+                  </ReferenceField>
                   <DateField source="publishDate" showTime/>
                   <EditButton />
               </Datagrid>

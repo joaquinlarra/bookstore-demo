@@ -1,5 +1,5 @@
 import React from 'react';
-import {EmailField, DateInput, Filter, ImageInput, ImageField, DateField, List, Responsive, SimpleList, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
+import {UrlField, EmailField, DateInput, Filter, ImageInput, ImageField, DateField, List, Responsive, SimpleList, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
 
 // const PostFilter = (props) => (
 //   <Filter {...props}>
@@ -9,6 +9,12 @@ import {EmailField, DateInput, Filter, ImageInput, ImageField, DateField, List, 
 //       </ReferenceInput>
 //   </Filter>
 // );
+
+const PublicationsUrlField = ({ record = {}, source }) =>
+    <a href={`/#/publications?filter={"authorId":${record.id}}`}>
+        View
+    </a>;
+
 
 export const AuthorList = (props) => (
   <List {...props}>
@@ -26,6 +32,7 @@ export const AuthorList = (props) => (
                   <TextField source="name" />
                   <EmailField source="email" />
                   <DateField source="createdAt" showTime />
+                  <PublicationsUrlField />
                   <EditButton />
               </Datagrid>
           }
