@@ -36,7 +36,7 @@ export const PublicationList = (props) => (
 );
 
 const PublicationTitle = ({ record }) => {
-  return <span>Publication {record ? `"${record.name}"` : ''}</span>;
+  return <span>Publication {record ? `"${record.title}"` : ''}</span>;
 };
 
 export const PublicationEdit = (props) => (
@@ -61,7 +61,7 @@ export const PublicationCreate = (props) => (
             <SelectInput optionText={<FullNameField />} />
         </ReferenceInput>
         <LongTextInput source="body" />
-        <DateTimeInput source="publishDate" />
+        <DateTimeInput source="publishDate" showTime/>
       </SimpleForm>
   </Create>
 );
