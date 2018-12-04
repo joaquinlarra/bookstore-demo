@@ -110,4 +110,6 @@ $RECYCLE.BIN/
 # Others
 lib/
 data/
-.sqlite
+*.sqlite
+config/default.json
+config/production.json

@@ -47,6 +47,7 @@ const AuthorTitle = ({ record }) => {
 export const AuthorEdit = (props) => (
   <Edit title={<AuthorTitle />} {...props}>
     <SimpleForm>
+        <TextField source="id" />
         <TextInput source="name" />
         <TextInput source="email" type="email" />
         <DateInput source="dob" />

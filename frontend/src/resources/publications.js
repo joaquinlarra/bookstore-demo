@@ -1,15 +1,6 @@
 import React from 'react';
 import { DateInput, DateTimeInput, Filter, ImageInput, ImageField, DateField, List, Responsive, SimpleList, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
 
-// const PostFilter = (props) => (
-//   <Filter {...props}>
-//       <TextInput label="Search" source="q" alwaysOn />
-//       <ReferenceInput label="User" source="userId" reference="users" allowEmpty>
-//           <SelectInput optionText="name" />
-//       </ReferenceInput>
-//   </Filter>
-// );
-
 
 const FullNameField = ({ record }) => <span><b>{record.name}</b> <small>{record.email}</small></span>;
 
@@ -28,9 +19,6 @@ export const PublicationList = (props) => (
           small={
               <SimpleList
                   primaryText={record => record.title}
-                  secondaryText={record => {
-                      return `${record.publishDate}`
-                    }}
               />
           }
           medium={
@@ -54,6 +42,7 @@ const PublicationTitle = ({ record }) => {
 export const PublicationEdit = (props) => (
   <Edit title={<PublicationTitle />} {...props}>
       <SimpleForm>
+        <TextField source="id" />
         <TextInput source="title" />
         <ReferenceInput label="Author" source="authorId" reference="authors">
             <SelectInput optionText={<FullNameField />} />
