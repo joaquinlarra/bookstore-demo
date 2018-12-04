@@ -20,3 +20,7 @@ This guide assumes you have GIT, Node (latest version) & SQLite3 previously inst
     2- `npm run frontend` to run frontend in `localhost:3000` (Port should be available!)<br><br>
     
 2) Testing endpoints: in root folder type `cd backend && run test`<br>
+
+
+NOTE:
+UI is responsive. In listings, in mobile layout, some fields are missing.  
