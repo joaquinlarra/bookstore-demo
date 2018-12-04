@@ -1,6 +1,6 @@
 # Bookstore Demo
 
-Bookstore demo based on Node.js & React.js.
+Bookstore demo based on Node.js & React.js.<br>See working demo at: <a href="http://bookstoredemo.joaquinastelarra.com">http://bookstoredemo.joaquinastelarra.com</a>
 
 ## INSTALL
 
@@ -21,5 +21,3 @@ This guide assumes you have GIT, Node (latest version) & SQLite3 previously inst
     3- `npm run frontend` to run frontend in `localhost:3000` (Port should be available!)<br><br>
     
 2) Testing endpoints: in root folder type `cd backend && run test`<br>
-
-
