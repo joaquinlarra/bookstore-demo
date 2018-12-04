@@ -16,8 +16,7 @@ This guide assumes you have GIT, Node (latest version) & SQLite3 previously inst
 ## RUN APP
 
 1) To run app, open 3 terminal tabs and type a single command on each one:<br>
-    1- `npm run db` to run sqlite3.<br>
-    2- `npm run backend` to run backend in `localhost:3030` (Port should be available!)<br>
-    3- `npm run frontend` to run frontend in `localhost:3000` (Port should be available!)<br><br>
+    1- `npm run backend` to run backend in `localhost:3030` (Port should be available!)<br>
+    2- `npm run frontend` to run frontend in `localhost:3000` (Port should be available!)<br><br>
     
 2) Testing endpoints: in root folder type `cd backend && run test`<br>
