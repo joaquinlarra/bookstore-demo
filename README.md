@@ -8,9 +8,9 @@ This guide assumes you have GIT, Node (latest version) & SQLite3 previously inst
 
 1) Clone repo `git clone git@gitlab.com:joaquinlarra/bookstore-demo.git` in your sites folder.<br>
 2) install dependencies `cd bookstore-demo && npm run install`.<br>
-3) Configure Backend:
+3) Configure Backend:<br>
     1 - Copy the .dist config file to default.json `cp backend/config/default.dist.json backend/config/default.json`<br>
-    2 - in default.json, replace value of [FULL SYSTEM PATH] in "sqlite" param with  the system path of project's root folder.
+    2 - edit default.json : `nano backend/config/default.json`, replace value of [FULL SYSTEM PATH] in "sqlite" param with  the system path of project's root folder.
    
 
 ## RUN APP
