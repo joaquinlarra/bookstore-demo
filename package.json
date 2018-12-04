@@ -7,7 +7,6 @@
     "test": "cd backend && npm test",
     "frontend": "cd frontend && npm start",
     "backend": "cd backend && npm start",
-    "db": "sqlite3",
     "install": "cd backend && npm install && cd ../frontend && npm install"
   },
   "repository": {
