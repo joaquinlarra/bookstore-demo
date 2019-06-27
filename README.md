@@ -1,6 +1,7 @@
 # Bookstore Demo
 
-Bookstore demo based on Node.js & React.js.<br>See working demo at: <a href="http://bookstoredemo.joaquinastelarra.com">http://bookstoredemo.joaquinastelarra.com</a>
+Bookstore demo based on Node.js & React.js.<br>See working demo at: <a href="http://bookstoredemo.joaquinastelarra.com">http://bookstoredemo.joaquinastelarra.com</a> (currently down)
+
 
 ## INSTALL
 
